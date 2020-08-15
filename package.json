@@ -1,0 +1,26 @@
+{
+  "name": "fdjstd8",
+  "version": "0.0.1",
+  "description": "first db based app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshay/fs_js_techdegree_project_8.git"
+  },
+  "author": "Harshay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshay/fs_js_techdegree_project_8/issues"
+  },
+  "homepage": "https://github.com/harshay/fs_js_techdegree_project_8#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pug": "^3.0.0",
+    "sequelize": "^5.10.1",
+    "sqlite3": "^5.0.0"
+  }
+}
