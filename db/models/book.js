@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
 
     Book.init({
 
-        id:{type: Sequelize.INTEGER, primarykey = true, autoIncrement: true},
+        id:{type: Sequelize.INTEGER, primarykey : true, autoIncrement: true},
         title:{type: Sequelize.VARCHAR, allowNull: false}, 
         author:{type: Sequelize.VARCHAR, allowNull: false}, 
         genre:{type: Sequelize.VARCHAR, allowNull: false}, 
