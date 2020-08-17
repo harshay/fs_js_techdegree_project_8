@@ -9,12 +9,12 @@ module.exports = (sequelize) => {
     Book.init({
 
         id:{type: Sequelize.INTEGER, primarykey : true, autoIncrement: true},
-        title:{type: Sequelize.VARCHAR, allowNull: false}, 
-        author:{type: Sequelize.VARCHAR, allowNull: false}, 
-        genre:{type: Sequelize.VARCHAR, allowNull: false}, 
+        title:{type: Sequelize.STRING, allowNull: false}, 
+        author:{type: Sequelize.STRING, allowNull: false}, 
+        genre:{type: Sequelize.STRING, allowNull: false}, 
         year:{type: Sequelize.INTEGER}
 
-    },{});
+    },{sequelize});
 
     return Book; 
 
