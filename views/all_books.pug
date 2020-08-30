@@ -1,0 +1,28 @@
+doctype html
+head
+  title Books
+  link(href='../public/stylesheets/style.css' rel='stylesheet')
+h1 Books
+p
+  a.button(href='new_book.html') Create New Book
+table
+  thead
+    tr
+      th Title
+      th Author
+      th Genre
+      th Year
+  tbody
+    each trw in books
+        tr
+            each tdr in book_entry
+                td = tdr
+
+
+  //-  tr
+      td
+        a(href='book_detail.html') The Universe in a Nutshell
+      td Stephen Hawking
+      td Non Fiction
+      td 2001
+    //
