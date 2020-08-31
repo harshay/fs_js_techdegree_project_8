@@ -1,11 +1,15 @@
 
 const express = require('express');  
-const router = express.Router(); 
+
+//create express application 
+const app = express();
+
+//set up templating engine  
+app.set('view engine','pug');
+
 const Book = require('./db/').Book;
 
 
- //console.log('hello');
- //localhost:3000
 
  //handler function 
  function asyncHandler(cb){ 
@@ -28,10 +32,15 @@ const Book = require('./db/').Book;
 
 //all books
 //display all books 
-router.get('/',asyncHandler(async(req,res) => {
+app.get('/',asyncHandler(async(req,res) => {
 
     const books = await Book.findAll()
 
     res.render('all_books', {books, title: 'All books'});
 
 })); 
+
+
+
+//set up development server
+app.listen(3000);
