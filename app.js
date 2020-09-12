@@ -7,7 +7,7 @@ const app = express();
 //set up templating engine  
 app.set('view engine','pug');
 
-const Book = require('./db/').Book;
+const Book = require('./db/').models.Book;
 
 
 
@@ -34,7 +34,7 @@ const Book = require('./db/').Book;
 //display all books 
 app.get('/',asyncHandler(async(req,res) => {
 
-    const books = await Book.findAll()
+    const books = await Book.findAll();
 
     res.render('all_books', {books, title: 'All books'});
 
