@@ -29,7 +29,6 @@ const Book = require('./db/').models.Book;
  };
  
 
-
 //all books
 //display all books 
 app.get('/',asyncHandler(async(req,res) => {
