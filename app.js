@@ -40,6 +40,11 @@ app.get('/',asyncHandler(async(req,res) => {
 
 })); 
 
+//localhost:3000/new_book
+// new book entry
+app.get('/new_book',asyncHandler(async(req,res) => {
+        res.render('new_book',{ book: {}, title : 'New Book'});
+})); 
 
 
 //set up development server
