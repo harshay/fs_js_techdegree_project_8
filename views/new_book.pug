@@ -1,9 +1,10 @@
+
 doctype html
 head
   title New Book
   link(rel='stylesheet' href='../public/stylesheets/style.css')
 h1 New Book
-form
+form(method = 'POST' action = '/')
   p
     label(for='title') Title
     input#title(name='title' type='text')
