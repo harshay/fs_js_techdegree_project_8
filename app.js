@@ -45,6 +45,12 @@ app.get('/new_book',asyncHandler(async(req,res) => {
         res.render('new_book',{ book: {}, title : 'New Book'});
 })); 
 
+app.post('/',asyncHandler(async(req,res) => {
+    const book = await Book.create(req.body);  
+    res.render('new_book'+ book.id);
+})); 
+
+
 
 //set up development server
 app.listen(3000);
