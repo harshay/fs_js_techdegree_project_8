@@ -7,6 +7,12 @@ const app = express();
 //set up templating engine  
 app.set('view engine','pug');
 
+
+
+//use a static route and the express.static method to serve the static files located in the public folder
+app.use('/static', express.static('public'));
+
+
 const Book = require('./db/').models.Book;
 
 
