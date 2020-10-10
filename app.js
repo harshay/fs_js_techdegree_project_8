@@ -4,9 +4,11 @@ const express = require('express');
 //create express application 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }))
+
+
 //set up templating engine  
 app.set('view engine','pug');
-
 
 
 //use a static route and the express.static method to serve the static files located in the public folder
@@ -53,8 +55,14 @@ app.get('/new_book',asyncHandler(async(req,res) => {
 
 app.post('/',asyncHandler(async(req,res) => {
     const book = await Book.create(req.body);  
-    res.render('new_book'+ book.id);
+    res.render('book/'+ book.id);
 })); 
+
+app.get('book/:id',asyncHandler(async(req,res) => {
+    res.render('book/:id',{ book: {}, title : 'New Book'});
+})); 
+
+
 
 
 

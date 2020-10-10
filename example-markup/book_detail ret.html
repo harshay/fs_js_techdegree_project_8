@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>book.title</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+</head>
+
+<body> 
+    <h1>Update Book</h1>
+    <form>   
+        <p>
+            <label for="title">Title</label>
+            <label > book.title</label>
+        </p>
+        <p>
+            <label for="author">Author</label>
+            <label >book.author</label>
+        </p>
+        <p>
+            <label for="genre">Genre</label>
+            <label >book.genre</label>
+        </p>
+        <p>
+            <label for="year">Year</label>
+            <label >book.year</label>
+        </p>
+        <p>
+            <input type="submit" value="Update Book">
+        </p>
+    </form>
+    <form method="post" action="/books/8/delete" onsubmit="return confirm('Do you really want to delete this book?');">
+        <p>
+            <a class="button" href="all_books.html">Cancel</a>
+        </p>
+        <p><input type="submit" value="Delete Book"></p>
+    </form>
+</body>
+
+</html>
